@@ -10,16 +10,18 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-searchbar (ionInput)="getContatos($event)">
+    
+  </ion-searchbar>
   
-  <ion-item *ngFor= "let contato of contatos">
+  <ion-item *ngFor= "let contatos of pessoa">
     <ion-avatar slot="start" style="width: 80px; height: 80px;">
       <img src="../assets/images/user.png" >
     </ion-avatar>
     <ion-label>
-      <h2>{{contato.nome}}</h2>
-      <p>{{contato.telefone}}</p>
-      <p>{{contato.email}}</p>
+      <h2>{{contatos.nome}}</h2>
+      <p>{{contatos.telefone}}</p>
+      <p>{{contatos.email}}</p>
     </ion-label>
   </ion-item>
   
